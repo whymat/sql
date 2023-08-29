@@ -1,13 +1,13 @@
--- Funções de Data e Hora
+-- FunÃ§Ãµes de Data e Hora
 
-SET DATEFORMAT YMD -- ano, mês, dia; é o sistema padrão dos EUA
+SET DATEFORMAT YMD -- ano, mÃªs, dia; Ã© o sistema padrÃ£o dos EUA
 
 SELECT GETDATE() -- retorna a data atual do sistema
 
 SELECT nome, DAY(dataNascto) -- retorna o dia de uma data
 FROM Funcionario
 
-SELECT nome, MONTH(dataNascto) -- retorna o mês de uma data
+SELECT nome, MONTH(dataNascto) -- retorna o mÃªs de uma data
 FROM Funcionario
 
 SELECT nome, YEAR(dataNascto) -- retorna o ano de uma data
@@ -26,13 +26,13 @@ FROM Funcionario
 
 -- DateDiff
 
-SELECT DATEDIFF(DAY, dataNascto, GETDATE()) -- apresenta a diferença em dias entre a data da tabela e a data atual
+SELECT DATEDIFF(DAY, dataNascto, GETDATE()) -- apresenta a diferenÃ§a em dias entre a data da tabela e a data atual
 FROM Funcionario
 
-SELECT DATEDIFF(MONTH, dataNascto, GETDATE()) -- apresenta a diferença em meses entre a data da tabela e a data atual
+SELECT DATEDIFF(MONTH, dataNascto, GETDATE()) -- apresenta a diferenÃ§a em meses entre a data da tabela e a data atual
 FROM Funcionario
 
-SELECT DATEDIFF(YEAR, dataNascto, GETDATE()) -- apresenta a diferença em anos entre a data da tabela e a data atual
+SELECT DATEDIFF(YEAR, dataNascto, GETDATE()) -- apresenta a diferenÃ§a em anos entre a data da tabela e a data atual
 FROM Funcionario
 
 SELECT DATEDIFF(DAY, '2004-04-19', '2023-12-31')
@@ -40,7 +40,8 @@ SELECT DATEDIFF(MONTH, '2004-04-19', GETDATE())
 SELECT DATEDIFF(YEAR, '2004-04-19', GETDATE())
 
 -- DateName
-SELECT DATENAME(MONTH, dataNascto) -- apresenta o nome do mês
+
+SELECT DATENAME(MONTH, dataNascto) -- apresenta o nome do mÃªs
 FROM Funcionario
 
 SELECT DATENAME(WEEKDAY, dataNascto) -- apresenta o nome do dia da semana
@@ -51,11 +52,11 @@ SELECT DATENAME(WEEKDAY, '2004-04-19')
 -- Exercicios
 
 -- 1
-SELECT nome, DAY(dataNascto) AS dia, MONTH(dataNascto) AS mês, YEAR(dataNascto) AS ano
+SELECT nome, DAY(dataNascto) AS dia, MONTH(dataNascto) AS mÃªs, YEAR(dataNascto) AS ano
 FROM Funcionario
 
 -- 2
-SELECT DISTINCT DATENAME(MONTH, dataNascto) AS mês, MONTH(dataNascto) AS NºMês
+SELECT DISTINCT DATENAME(MONTH, dataNascto) AS mÃªs, MONTH(dataNascto) AS NÂºMÃªs
 FROM Funcionario
 ORDER BY MONTH(dataNascto)
 
@@ -70,7 +71,7 @@ FROM Funcionario
 WHERE dataNascto LIKE '1988-04%'
 
 -- 5
-SELECT nome, DATEADD (MONTH, 2, dataNascto) AS acréscimo
+SELECT nome, DATEADD (MONTH, 2, dataNascto) AS acrÃ©scimo
 FROM Funcionario
 
 -- 6
