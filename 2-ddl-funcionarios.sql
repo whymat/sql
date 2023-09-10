@@ -1,5 +1,3 @@
--- Matheus Henrique Santos e Silva / 4º ADS
-
 SET DATEFORMAT YMD
 
 create database RecursosHumanos
@@ -45,27 +43,29 @@ GO
 INSERT INTO Funcionario
 (idFuncionario, nome, endereco, cidade, estado, email, dataNascto)
 VALUES
-(1, 'José da Silva', 'Av. São Paulo, 34', 'Itu', 'SP', 'zesilva@yahoo.com.br', '24-02-1991')
+(1, 'JosÃ© da Silva', 'Av. SÃ£o Paulo, 34', 'Itu', 'SP', 'zesilva@yahoo.com.br', '24-02-1991')
 GO
 
 INSERT INTO Funcionario
 VALUES
-(2, 'João de Oliveira', 'Rua da Saúde, 138', 'Jundiaí', 'SP', 'jojo@hotmail.com',
+(2, 'JoÃ£o de Oliveira', 'Rua da SaÃºde, 138', 'JundiaÃ­', 'SP', 'jojo@hotmail.com',
 '11-01-1988',750,'TI',1)
 GO
 
 INSERT INTO Funcionario
 VALUES
-(3, 'Ana Pimenta', 'Rua da Saúde, 11', 'Jundiaí', 'SP',
+(3, 'Ana Pimenta', 'Rua da SaÃºde, 11', 'JundiaÃ­', 'SP',
 'pimentinha@hotmail.com', '01-01-1987',750,'TI',0),
-(4, 'Mário Lopes', 'Rua Angélica, 143', 'Jundiaí', 'SP', 'mlopes@ hotmail.com',
+(4, 'MÃ¡rio Lopes', 'Rua AngÃ©lica, 143', 'JundiaÃ­', 'SP', 'mlopes@ hotmail.com',
 '10-04-1985',750,'TI',0)
 GO
 
 -- 2
 UPDATE Funcionario SET
 cidade = 'Valinhos'
-WHERE cidade = 'Itu'DELETE FROM Funcionario
+WHERE cidade = 'Itu'
+
+DELETE FROM Funcionario
 WHERE idFuncionario = 2
 GO
 
@@ -74,13 +74,13 @@ INSERT INTO Funcionario
 (idFuncionario, nome, endereco, cidade, estado, email, dataNascto)
 VALUES
 (5, 'Carlos Dias', 'Av. Lapa, 121', 'Itu', 'SP', 'carlao@gmail.com', '1990-03-31'),
-(6, 'Ana Maria da Cunha', 'Av. São Paulo, 388', 'Itu', 'SP', 'aninhacunha@gmail.com', '1988-04-12'),
-(7, 'Cláudia Regina Martins', 'Rua Holanda, 89', 'Campinas', 'SP', 'cregina@gmail.com', '1988-12-04'),
-(8, 'Marcela Tatho', 'Rua Bélgica, 43', 'Campinas', 'SP', 'marctatho@hotmail.com', '1987-11-09'),
-(9, 'Jorge Luís Rodrigues', 'Av. da Saudade, 1989', 'São Paulo', 'SP', 'jorgeluis@yahoo.com.br', '1990-05-05'),
-(10, 'Ana Paula Camargo', 'Rua Costa e Silva, 33', 'Jundiaí', 'SP', 'apcamargo@gmail.com', '1991-06-30'),
+(6, 'Ana Maria da Cunha', 'Av. SÃ£o Paulo, 388', 'Itu', 'SP', 'aninhacunha@gmail.com', '1988-04-12'),
+(7, 'ClÃ¡udia Regina Martins', 'Rua Holanda, 89', 'Campinas', 'SP', 'cregina@gmail.com', '1988-12-04'),
+(8, 'Marcela Tatho', 'Rua BÃ©lgica, 43', 'Campinas', 'SP', 'marctatho@hotmail.com', '1987-11-09'),
+(9, 'Jorge LuÃ­s Rodrigues', 'Av. da Saudade, 1989', 'SÃ£o Paulo', 'SP', 'jorgeluis@yahoo.com.br', '1990-05-05'),
+(10, 'Ana Paula Camargo', 'Rua Costa e Silva, 33', 'JundiaÃ­', 'SP', 'apcamargo@gmail.com', '1991-06-30'),
 (11, 'Ivo Cunha', 'Av. Raio de Luz, 100', 'Campinas', 'SP', 'ivo@bol.com.br', '1987-04-11'),
-(12, 'Carlos Luís de Souza', 'Rua Nicolau Coelho, 22', 'São Paulo', 'SP', 'cls@bol.com.br', '1988-04-30')
+(12, 'Carlos LuÃ­s de Souza', 'Rua Nicolau Coelho, 22', 'SÃ£o Paulo', 'SP', 'cls@bol.com.br', '1988-04-30')
 GO
 
 -- 3
@@ -102,11 +102,11 @@ WHERE cidade = 'Campinas'
 
 UPDATE Funcionario SET
 cargo = 'TI'
-WHERE cidade = 'Jundiaí'
+WHERE cidade = 'JundiaÃ­'
 
 UPDATE Funcionario SET
 salario = 750
-WHERE cidade = 'Jundiaí'
+WHERE cidade = 'JundiaÃ­'
 
 -- 4
 SELECT nome, cargo
