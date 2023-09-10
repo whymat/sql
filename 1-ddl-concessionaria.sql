@@ -1,5 +1,3 @@
--- Matheus Henrique Santos e Silva / 4º ADS
-
 --1
 create database Concessionaria
 GO
