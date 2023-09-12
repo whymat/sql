@@ -1,12 +1,12 @@
--- Funções de Agregação
+-- FunÃ§Å‘es de AgregaÃ§Äƒo
 
-SELECT COUNT(*) FROM Funcionario -- conta o número de colunas
+SELECT COUNT(*) FROM Funcionario -- conta o nÃºmero de colunas
 
-SELECT COUNT(DISTINCT cidade) FROM Funcionario -- conta o número de cidades cadastradas no banco
+SELECT COUNT(DISTINCT cidade) FROM Funcionario -- conta o nÃºmero de cidades cadastradas no banco
 
-SELECT SUM(salario) FROM Funcionario -- soma de todos os salários
+SELECT SUM(salario) FROM Funcionario -- soma de todos os salÃ¡rios
 
-SELECT AVG(salario) FROM Funcionario -- média de todos os salários
+SELECT AVG(salario) FROM Funcionario -- mÃ©dia de todos os salÃ¡rios
 
 SELECT MAX(salario) FROM Funcionario -- maior valor
 
@@ -15,7 +15,7 @@ SELECT MIN(salario) FROM Funcionario -- menor valor
 SELECT cidade, COUNT(*) AS QtdadeFuncCidade -- erro
 FROM Funcionario
 
-SELECT cidade, COUNT(*) AS QtdadeFuncCidade -- é necessário agrupar
+SELECT cidade, COUNT(*) AS QtdadeFuncCidade -- Ã© necessÃ¡rio agrupar
 FROM Funcionario
 GROUP by cidade 
 
@@ -24,12 +24,12 @@ FROM Funcionario
 WHERE COUNT(*) > 2
 GROUP by cidade
 
-SELECT cidade, COUNT(*) -- count não é uma coluna e sim um parâmetro, WHERE precisa ser acompanhado de uma coluna
+SELECT cidade, COUNT(*) -- count nÄƒo Ã© uma coluna e sim um parÃ¢metro, WHERE precisa ser acompanhado de uma coluna
 FROM Funcionario
 GROUP by cidade
 HAVING COUNT(*) > 2
 
--- Exercícios
+-- ExercÃ­cios
 
 -- 1
 SELECT MAX(salario), MIN(salario)
@@ -72,7 +72,7 @@ WHERE cidade = 'Campinas'
 -- 9
 SELECT AVG(salario)
 FROM Funcionario
-WHERE cidade = 'São Paulo'
+WHERE cidade = 'SÄƒo Paulo'
 
 -- 10
 SELECT SUM(salario)
@@ -87,7 +87,7 @@ WHERE nome LIKE '%Luis%'
 -- 12
 SELECT MAX(salario), MIN(salario)
 FROM Funcionario
-WHERE endereco LIKE 'Av. São Paulo%'
+WHERE endereco LIKE 'Av. SÄƒo Paulo%'
 
 -- 13
 SELECT cargo, COUNT(cargo)
@@ -121,12 +121,12 @@ GROUP by cargo
 -- 18
 UPDATE Funcionario
 SET ativo = 1
-WHERE cidade = 'Jundiaí' OR cidade = 'São Paulo'
+WHERE cidade = 'JundiaÃ­' OR cidade = 'SÄƒo Paulo'
 
 -- 19
 UPDATE Funcionario
 SET ativo = 0
-WHERE cidade <> 'Jundiaí' AND cidade <> 'São Paulo'
+WHERE cidade <> 'JundiaÃ­' AND cidade <> 'SÄƒo Paulo'
 
 -- 20
 SELECT ativo, COUNT(ativo)
